@@ -9,6 +9,7 @@ import React, { useEffect } from 'react'
 function Provider({children}) {
 
   const {user}=useUser();
+  console.log("User Data",user);
 
   useEffect(()=>{
      user&&CheckNewUser();
@@ -26,7 +27,6 @@ function Provider({children}) {
       console.log("New User Created",UserRes);
     }
   }
-
   return (
     <>
      {children}
